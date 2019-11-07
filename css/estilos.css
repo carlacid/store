@@ -1,0 +1,110 @@
+body{
+  font-family: 'Homer Simpson';
+  /*font-variant: small-caps;*/
+}
+
+.nav nav{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:80;
+}
+
+.menu * {
+	list-style:none;
+}
+
+.menu li a{
+	color:#222;
+	text-decoration:none;
+	margin-left: 2em;
+}
+
+.menu li a:before{
+	color:#ddd;
+}
+
+.menu input[name="list"] {
+	position: absolute;
+	left: -1000em;
+}
+
+.menu .interior{
+	display: none;
+}
+
+.menu input:checked ~ div{
+	display:block;
+}
+
+.nav-link{
+	color: black;
+}
+
+.imagendw{
+	background: url("../img/dw.png") repeat scroll center center / cover;
+	height: 89vh;
+}
+
+.imagenmujer{
+	background: url("../img/mujer.png") repeat scroll center center / cover;
+	height: 90vh;
+}
+
+.imagenhombre{
+	background: url("../img/hombre.png") repeat scroll center center / cover;
+	height: 90vh;
+}
+
+.imagenmujerreb{
+	background: url("../img/mujer_rebajas.png") repeat scroll center center / cover;
+	height: 90vh;
+}
+
+.catalogo{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.colorgris{
+	background-color: #F2F1F1;
+}
+
+.imagenes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lista{
+	list-style: none;
+}
+
+.textoinfo{
+	font-size: 25px;
+}
+
+.compra{
+	display: flex;
+	justify-content: center;
+}
+
+.gris{
+	color: darkgrey;
+	font-size: 12px;
+}
+
+.distribucion{
+	display: flex;
+	justify-content: space-between;
+}
+
+.color{
+	background-color: blue;
+	border: 1px solid black;
+	height: 20px;
+	width: 20px;
+}
