@@ -6,7 +6,7 @@ header("Content-Type: text/html;charset=utf-8");
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Pantalones mujer</title>
+	<title>Blusas mujer</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -39,13 +39,13 @@ header("Content-Type: text/html;charset=utf-8");
 							<a class="nav-link mr-5 mt-2" href="php/create.php">REGISTRARSE</a>
 						</li>
 						<li class="nav-item">
-								<a class="nav-link ml-5 mt-2 disabled" href="#">BUSCAR</a>
+							<a class="nav-link ml-5 mt-2 disabled" href="#">BUSCAR</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link ml-2 mt-2 disabled" href="php/create.php">INICIAR SESIÓN</a>
+							<a class="nav-link ml-2 mt-2 disabled" href="#">INICIAR SESIÓN</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link ml-2 mt-2 disabled" href="php/create.php">CESTA</a>
+							<a class="nav-link ml-2 mt-2 disabled" href="#">CESTA</a>
 						</li>
 					</ul>
 				</div>
@@ -59,7 +59,7 @@ header("Content-Type: text/html;charset=utf-8");
 	</div>
 	<div class="container-fluid">
 		<div class="pt-3 pb-2 text-center">
-			<p><b>PANTALONES</b></p>
+			<p><b>ABRIGOS</b></p>
 			<small>Nuevas prendas cada semana y rebajas de hasta un 40%.</small>
 		</div>
 	</div>
@@ -83,8 +83,8 @@ header("Content-Type: text/html;charset=utf-8");
 		</div>
 		<div class="col-lg-9">
 			<div class="row mt-3">
-			<?php 
-				
+				<?php
+
 				$db=new mysqli('localhost','userc','admin1234','proyecto');//nos conectamos a la base
 				mysqli_set_charset($db,"utf8");
 
@@ -93,7 +93,7 @@ header("Content-Type: text/html;charset=utf-8");
 				}
 				
 				//guardamos la consulta en una variable y la comprobamos
-				$sql = "select DISTINCT Referencia,Foto,Precio,Nombre,Rebaja from ropamujer where Tipo='Pantalon';";
+				$sql = "select DISTINCT Referencia,Foto,Precio,Nombre,Rebaja from ropamujer where Tipo='Blusa';";
 				if(!$resultado=$db->query($sql)){
 					die('Erro de conexión');
 				}

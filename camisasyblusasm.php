@@ -6,7 +6,7 @@ header("Content-Type: text/html;charset=utf-8");
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Pantalones mujer</title>
+	<title>Camisas y blusas mujer</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -42,10 +42,10 @@ header("Content-Type: text/html;charset=utf-8");
 								<a class="nav-link ml-5 mt-2 disabled" href="#">BUSCAR</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link ml-2 mt-2 disabled" href="php/create.php">INICIAR SESIÓN</a>
+							<a class="nav-link ml-2 mt-2 disabled" href="#">INICIAR SESIÓN</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link ml-2 mt-2 disabled" href="php/create.php">CESTA</a>
+							<a class="nav-link ml-2 mt-2 disabled" href="#">CESTA</a>
 						</li>
 					</ul>
 				</div>
@@ -93,7 +93,7 @@ header("Content-Type: text/html;charset=utf-8");
 				}
 				
 				//guardamos la consulta en una variable y la comprobamos
-				$sql = "select DISTINCT Referencia,Foto,Precio,Nombre,Rebaja from ropamujer where Tipo='Pantalon';";
+				$sql = "select DISTINCT Referencia,Foto,Precio,Nombre,Rebaja from ropamujer where Tipo='Blusa' or Tipo='Camisa';";
 				if(!$resultado=$db->query($sql)){
 					die('Erro de conexión');
 				}

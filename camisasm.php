@@ -6,7 +6,7 @@ header("Content-Type: text/html;charset=utf-8");
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Pantalones mujer</title>
+	<title>Camisas mujer</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -93,7 +93,7 @@ header("Content-Type: text/html;charset=utf-8");
 				}
 				
 				//guardamos la consulta en una variable y la comprobamos
-				$sql = "select DISTINCT Referencia,Foto,Precio,Nombre,Rebaja from ropamujer where Tipo='Pantalon';";
+				$sql = "select DISTINCT Referencia,Foto,Precio,Nombre,Rebaja from ropamujer where Tipo='Camisas';";
 				if(!$resultado=$db->query($sql)){
 					die('Erro de conexión');
 				}

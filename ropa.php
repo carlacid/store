@@ -49,7 +49,7 @@
 	<?php 
 		header("Content-Type: text/html;charset=utf-8");
 
-		$v1 = $_GET['variable1'];
+		$v1 = $_POST['referencia'];
 
 		$db=new mysqli('localhost','userc','admin1234','proyecto');//nos conectamos a la base
 		mysqli_set_charset($db,"utf8");
@@ -80,26 +80,27 @@
 			
 			$i++;
 		}
-		echo "<a href='ropa.php/?variable1=".$Referencia."'le=''><img src='img".$Foto.$Referencia.".jpg' class='img-fluid'></a>";
+		echo "<img src='img".$Foto.$Referencia.".jpg' class='img-fluid'></a>";
 				echo "</div>";
 				echo "<div class='col-lg-4 mt-5 pt-5'>";
 					echo "<div class='row col-lg-12 distribucion'>";
-						echo "<span>Pantalón ...</span>";
-						echo "<span><strike>29,95€</strike><span class='text-danger'>23,96€</span></span>";
+						echo "<span>".$Nombre."</span>";
+						$PrecioRe=$Precio-($Precio*($Rebaja/100));
+						echo "<span><strike>".$Precio."€</strike><span class='text-danger'>".$PrecioRe."€</span></span>";
 					echo "</div>";
 					echo "<div class='row col-lg-12 distribucion gris'>";
-						// echo "<span>REF. 41057777-LLESTIR-LM</span>";
-					// echo "<span>(-20%)</span>";
+						echo "<span>REF. &nbsp &nbsp".$Referencia."</span>";
+					echo "<span>(-".$Rebaja."%)</span>";
 					echo "</div>";
-					echo "<div class='row col-lg-12 distribucion mt-5 mb-5'>";
+					echo "<div class='row col-lg-12 mt-5 mb-5'>";
 						// echo "<a href='#' title=''><div class='color'></div></a>";
-						// echo "<span>Azul marino</span>";
+						echo "<span class='text-right'>".$Color."</span>";
 					echo "</div>";
 					echo "<div class='form-group row col-lg-12'>";
 						echo "<select class='custom-select' required>";
-							// echo "<option value='' selected>Elige una talla</option>";
-							// echo "<option>XS</option>";
-							// echo "<option>S</option>";
+							echo "<option value='' selected>Elige una talla</option>";
+							echo "<option>".$Talla."</option>";
+							// echo "<option>".$Talla."</option>";
 							// echo "<option>M</option>";
 							// echo "<option>L</option>";
 						echo "</select>";
@@ -109,8 +110,8 @@
 	?>
 	<div class='row mt-4'>
 						<div class='col-lg-12'>
-							<button type='submit' class='btn btn-dark text-white col-lg-9'>AÑADIR A LA CESTA</button>
-							<button class='bg-dark col-lg-2 ml-2 mr-0'><img src='img/megusta.png' class='img-fluid'></butto>
+							<button type='submit' class='btn btn-dark text-white col-lg-12'>AÑADIR A LA CESTA</button>
+							<!-- <button class='bg-dark col-lg-2 ml-2 mr	-0'><img src='img/megusta.png' class='img-fluid'></butto> -->
 						</div>
 					</div>
 </div>
