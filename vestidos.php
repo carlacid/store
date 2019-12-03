@@ -1,8 +1,12 @@
+<?php
+header("Content-Type: text/html;charset=utf-8");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Página principal</title>
+	<title>Vestidos mujer</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -35,7 +39,13 @@
 							<a class="nav-link mr-5 mt-2" href="php/create.php">REGISTRARSE</a>
 						</li>
 						<li class="nav-item">
-							<input class="nav-link ml-5 mt-2">
+							<a class="nav-link ml-5 mt-2 disabled" href="#">BUSCAR</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link ml-2 mt-2 disabled" href="#">INICIAR SESIÓN</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link ml-2 mt-2 disabled" href="#">CESTA</a>
 						</li>
 					</ul>
 				</div>
@@ -56,14 +66,14 @@
 	<div class="container-fluid">
 		<div class="row">
 		<div class="col-lg-3 lista">
-			<li class="mt-4"><b>PENDAS</b></li>
+			<li class="mt-4"><b>PRENDAS</b></li>
 			<li class="mt-4 mb-4"><a href="vestidos.php" class="text-dark">Vestidos</a></li>
 			<div class="menu mb-4">
 				<li><input type="checkbox" name="list" id="nivel1-1"><label for="nivel1-1" class="text-dark">Camisas | Blusas</label>
 					<div class="interior">
-						<a href="camisasyblusasm.html"><b>Ver todo</b></a><br>
-						<a href="camisasm.html">Camisas</a><br>
-						<a href="blusasm.html">Blusas</a>
+						<a href="camisasyblusasm.php"><b>Ver todo</b></a><br>
+						<a href="camisasm.php">Camisas</a><br>
+						<a href="blusasm.php">Blusas</a>
 					</div>
 				</li>
 			</div>
@@ -74,7 +84,6 @@
 		<div class="col-lg-9">
 			<div class="row mt-3">
 				<?php 
-				header("Content-Type: text/html;charset=utf-8");
 
 				$db=new mysqli('localhost','userc','admin1234','proyecto');//nos conectamos a la base
 				mysqli_set_charset($db,"utf8");
@@ -100,8 +109,10 @@
 					$Nombre=$fila->Nombre;
 					$Rebaja=$fila->Rebaja;
 					echo"<div class='col-lg-3'>";
-					//echo"<a href='pantalon1.html'><img src='img/".$Referencia."/".$Referencia."jpg' class='img-fluid'></a>";
-					echo"<a href='pantalon1.html'><img src='img".$Foto.$Referencia.".jpg' class='img-fluid'></a>";
+					echo"<form action='ropa.php' method='post'>";
+	 					echo"<input type='hidden' name='referencia' value='".$Referencia."' />";
+	 					echo"<input title='boton enviar' alt='boton enviar' src='img".$Foto.$Referencia.".jpg' type='image' class='img-fluid' />";
+					echo"</form>";
 
 					echo"<small>".$Nombre."</small><br>";
 					if ($Rebaja==0) {
@@ -126,69 +137,6 @@
 					$j++;
 					$i++;
 				}
-				/*---------------------------------
-				<div class="col-lg-3">
-					<a href="#" title=""><img src="img/mujer/vestidos/vestido6.jpg" class="img-fluid"></a>
-					<small>Vestido 1</small><br>
-					<small><strike>29,95€</strike></small>
-					<small class="text-danger">10,95€</small>
-				</div>
-				<div class="col-lg-3">
-					<a href="#" title=""><img src="img/mujer/vestidos/vestido3.jpg" class="img-fluid"></a>
-					<small>Vestido 6</small><br>
-					<small>29,95€</small>
-				</div>
-				<div class="col-lg-3">
-					<a href="#" title=""><img src="img/mujer/vestidos/vestido7.jpg" class="img-fluid"></a>
-					<small>Vestido 3</small><br>
-					<small><strike>25,95€</strike></small>
-					<small class="text-danger">20,95€</small>
-				</div>
-				<div class="col-lg-3">
-					<a href="#" title=""><img src="img/mujer/vestidos/vestido2b.jpg" class="img-fluid"></a>
-					<small>Vestido 4</small><br>
-					<small><strike>17,95€</strike></small>
-					<small class="text-danger">15,95€</small>
-				</div>				
-			</div>
-			<div class="row mt-3">
-				<div class="col-lg-3">
-					<a href="#" title=""><img src="img/mujer/vestidos/vestido12.jpg" class="img-fluid"></a>
-					<small>Vetido 10</small><br>
-					<small>29,95€</small>
-				</div>
-				<div class="col-lg-3">
-					<a href="#" title=""><img src="img/mujer/vestidos/vestido10.jpg" class="img-fluid"></a>
-					<small>Vestido 2</small><br>
-					<small><strike>19,95€</strike></small>
-					<small class="text-danger">15,95€</small>
-				</div>
-				<div class="col-lg-3">
-					<a href="#" title=""><img src="img/mujer/vestidos/vestido4b.jpg" class="img-fluid"></a>
-					<small>Vestido 7</small><br>
-					<small>19,95€</small>
-				</div>
-				<div class="col-lg-3">
-					<a href="#" title=""><img src="img/mujer/vestidos/vestido9.jpg" class="img-fluid"></a>
-					<small>Vestido 8</small><br>
-					<small>25,95€</small>
-				</div>
-			</div>
-			<div class="row mt-3">
-				<div class="col-lg-3">
-					<a href="#" title=""><img src="img/mujer/vestidos/vestido11.jpg" class="img-fluid"></a>
-					<small>Vestido 9</small><br>
-					<small>17,95€</small>
-				</div>				
-				<div class="col-lg-3">
-					<a href="#" title=""><img src="img/mujer/vestidos/vestido8.jpg" class="img-fluid"></a>
-					<small>Vetido 5</small><br>
-					<small><strike>29,95€</strike></small>
-					<small class="text-danger">26,95€</small>
-				</div>
-		</div>	
-		</div>
-		---------------------------------*/
 		?>
 	</div>
 	</div>

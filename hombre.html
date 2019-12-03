@@ -35,7 +35,13 @@
 		  							<a class="nav-link mr-5 mt-2" href="php/create.php">REGISTRARSE</a>
 		  						</li>
 		  						<li class="nav-item">
-		  							<input class="nav-link ml-5 mt-2">
+		  							<a class="nav-link ml-5 mt-2 disabled" href="#">BUSCAR</a>
+		  						</li>
+		  						<li class="nav-item">
+		  							<a class="nav-link ml-2 mt-2 disabled" href="#">INICIAR SESIÓN</a>
+		  						</li>
+		  						<li class="nav-item">
+		  							<a class="nav-link ml-2 mt-2 disabled" href="#">CESTA</a>
 		  						</li>
 		  					</ul>
 		  				</div>
@@ -44,13 +50,12 @@
 			</div>
 			<div class="container-fluid">
 				<div class="row imagenhombre">
-					<!-- <img src="img/mujer.png" alt=""> -->
-					<a class="col-lg-12 catalogo" href="hombrerebajas.html">Comprar ahora</a>
+					<a class="col-lg-12 catalogo" href="abrigosh.php">Comprar ahora</a>
 				</div>
 			</div>
 			<div class="container-fluid colorgris pt-2 pb-4">
 				<div class="row mt-4">
-					<div class="col-lg-2"><b>PENDAS</b>
+					<div class="col-lg-2"><b>PRENDAS</b>
 						<div class="lista">
 							<li class="mt-4 mb-4"><a href="camisetash.php" class="text-dark">Camisetas</a></li>
 							<li class="mb-4"><a href="camisash.php" class="text-dark">Camisas</a></li>
@@ -62,18 +67,18 @@
 					<div class="col-lg-10 imagenes">
 						<div class="col-lg-4">
 							<img src="img/imagen15.png" class="img-fluid">
-							<a href="#"><small class="compra">Comprar ahora</small></a>
+							<a href="pantalonesh.php"><small class="compra">Comprar ahora</small></a>
 						</div>
 						<div class="col-lg-2">
-							<a href="#">PANTALONES</a><br>
+							<a href="pantalonesh.php">PANTALONES</a><br>
 							<small>Esta temporada los pantalones anchos o de campana completan el traje de sastrería. No faltan en la colección el clásico chino ni los pantalones pitillo, capri o de pana.</small>
 						</div>
 						<div class="col-lg-4">
 							<img src="img/imagen13.png" class="img-fluid">
-							<a href="#"><small class="compra">Comprar ahora</small></a>
+							<a href="camisetash.php"><small class="compra">Comprar ahora</small></a>
 						</div>
 						<div class="col-lg-2">
-							<a href="#">CAMISETAS</a><br>
+							<a href="camisetash.php">CAMISETAS</a><br>
 							<small>Desde la camisa blanca más versátil a tops y blusas de fiesta que siguen las tendencias de la temporada: mangas abullonadas, lazadas en cuello o puños y diseños estampados.</small>
 						</div>
 					</div>
@@ -81,32 +86,32 @@
 					<div class="col-lg-10 mt-4 imagenes">
 						<div class="col-lg-4">
 							<img src="img/imagen14.png" class="img-fluid">
-							<a href="#" title=""><small class="compra">Comprar ahora</small></a>
+							<a href="calzadoh.php" title=""><small class="compra">Comprar ahora</small></a>
 						</div>
 						<div class="col-lg-2">
-							<a href="#">CALZADO</a><br>
+							<a href="calzadoh.php">CALZADO</a><br>
 							<small>Para el día, vestidos cortos estampados y de estilo casual o diseños formales para la oficina. De noche, vestidos largos y elegantes para eventos especiales.</small>
 						</div>
 						<div class="col-lg-4">
 							<img src="img/imagen12.png" class="img-fluid">
-							<a href="#" title=""><small class="compra">Comprar ahora</small></a>
+							<a href="abrigosh.php" title=""><small class="compra">Comprar ahora</small></a>
 						</div>
 						<div class="col-lg-2">
-							<a href="#">ABRIGOS</a><br>
+							<a href="abrigosh.php">ABRIGOS</a><br>
 							<small>Para el día, vestidos cortos estampados y de estilo casual o diseños formales para la oficina. De noche, vestidos largos y elegantes para eventos especiales.</small>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="container-fluid mt-4">
-					<div class="row">
-			<div class="col-lg-6">
-				<h2 class="mb-4">SERVICIO AL CLIENTE</h2>
-				<p class="mb-1 text-secondary">23 Main, Street</p>
-				<p class="mb-1 text-secondary">New York, United States</p>
-				<p class="mb-1 text-secondary">+88 01912704287</p>
-				<p class="text-secondary">example@example.com</p>
-			</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<h2 class="mb-4">SERVICIO AL CLIENTE</h2>
+						<p class="mb-1 text-secondary">Calle Urzaiz, 24</p>
+						<p class="mb-1 text-secondary">Vigo, Pontevedra</p>
+						<p class="mb-1 text-secondary">+34 986574212</p>
+						<p class="text-secondary">dwstore@dw.com</p>
+					</div>
 			<div class="col-lg-5">
 				<div class="form-group">
 					<div class="form-row">
@@ -120,7 +125,8 @@
 							<textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="MENSAJE" required></textarea>
 						</div>
 						<div class="form-group col-lg-12">
-							<button type="submit" class="btn btn-dark text-white col-lg-12">SEND MESSAGE</button>
+							<input type="button" class="btn btn-dark text-white col-lg-12" onclick="alert();" value="ENVIA UN MENSAJE" />
+							<!-- <button type="submit" class="btn btn-dark text-white col-lg-12">SEND MESSAGE</button> -->
 						</div>
 					</div>
 				</div>
@@ -129,10 +135,10 @@
 	</div>
 <div class="container-fluid">
 	<footer class="row p-3 colorgris">
-		<div class="col-lg-3">INSTAGRAM</div>
-		<div class="col-lg-3">TWITTER</div>
-		<div class="col-lg-3">FACEBOOK</div>
-		<div class="col-lg-3">PINTEREST</div>
+		<div class="col-lg-3"><a href="https://www.instagram.com/?hl=es" class="text-dark" target=_blank>INSTAGRAM</a></div>
+		<div class="col-lg-3"><a href="https://twitter.com/?lang=es" class="text-dark" target=_blank>TWITTER</a></div>
+		<div class="col-lg-3"><a href="https://es-es.facebook.com/" class="text-dark" target=_blank>FACEBOOK</a></div>
+		<div class="col-lg-3"><a href="https://www.pinterest.es/" class="text-dark" target=_blank>PINTEREST</a></div>
 	</footer>
 </div>
 

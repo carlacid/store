@@ -36,14 +36,13 @@
 								<a class="nav-link mr-5 mt-2" href="php/create.php">REGISTRARSE</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link ml-5 mt-2" href="#">BUSCAR</a>
-								<!-- <input class="nav-link ml-5 mt-2"> -->
+								<a class="nav-link ml-5 mt-2 disabled" href="#">BUSCAR</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link ml-2 mt-2" href="php/create.php">INICIAR SESIÓN</a>
+								<a class="nav-link ml-2 mt-2 disabled" href="php/create.php">INICIAR SESIÓN</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link ml-2 mt-2" href="php/create.php">CESTA</a>
+								<a class="nav-link ml-2 mt-2 disabled" href="php/create.php">CESTA</a>
 							</li>
 						</ul>
 					</div>
@@ -52,9 +51,7 @@
 		</div>
 	</div>
 	<div class="container-fluid">
-		<div class="row imagendw">
-			<a class="col-lg-12 catalogo" href="#">Ver catálogo</a>
-		</div>
+		<div class="row imagendw"></div>
 	</div>
 	<div class="container-fluid colorgris pt-5 pb-5" id="mujerreb">
 		<div class="row mt-4">
@@ -67,7 +64,7 @@
 			<div class="col-lg-10 imagenes">
 				<div class="col-lg-4">
 					<img src="img/imagen6.jpeg" class="img-fluid">
-					<a href="pantalonesm.html" title=""><small class="text-danger compra">Comprar ahora</small></a>
+					<a href="pantalonesm.php" title=""><small class="text-danger compra">Comprar ahora</small></a>
 				</div>
 				<div class="col-lg-2">
 					<a href="pantalonesm.php" class="text-danger">PANTALONES</a><br>
@@ -75,7 +72,7 @@
 				</div>
 				<div class="col-lg-4">
 					<img src="img/imagen2.jpg" class="img-fluid">
-					<a href="camisetasm.html" title=""><small class="text-danger compra">Comprar ahora</small></a>
+					<a href="camisetasm.php" title=""><small class="text-danger compra">Comprar ahora</small></a>
 				</div>
 				<div class="col-lg-2">
 					<a href="camisetasm.php" class="text-danger">CAMISETAS</a><br>
@@ -86,7 +83,7 @@
 			<div class="col-lg-10 mt-4 imagenes">
 				<div class="col-lg-4">
 					<img src="img/imagen3.jpg" class="img-fluid">
-					<a href="vestidos.html" title=""><small class="text-danger compra">Comprar ahora</small></a>
+					<a href="vestidos.php" title=""><small class="text-danger compra">Comprar ahora</small></a>
 				</div>
 				<div class="col-lg-2">
 					<a href="vestidos.php" class="text-danger">VESTIDOS</a><br>
@@ -94,7 +91,7 @@
 				</div>
 				<div class="col-lg-4">
 					<img src="img/imagen5.jpeg" class="img-fluid">
-					<a href="abrigosm.html" title=""><small class="text-danger compra">Comprar ahora</small></a>
+					<a href="abrigosm.php" title=""><small class="text-danger compra">Comprar ahora</small></a>
 				</div>
 				<div class="col-lg-2">
 					<a href="abrigosm.php" class="text-danger">ABRIGOS</a><br>
@@ -107,10 +104,10 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<h2 class="mb-4">SERVICIO AL CLIENTE</h2>
-				<p class="mb-1 text-secondary">23 Main, Street</p>
-				<p class="mb-1 text-secondary">New York, United States</p>
-				<p class="mb-1 text-secondary">+88 01912704287</p>
-				<p class="text-secondary">example@example.com</p>
+				<p class="mb-1 text-secondary">Calle Urzaiz, 24</p>
+				<p class="mb-1 text-secondary">Vigo, Pontevedra</p>
+				<p class="mb-1 text-secondary">+34 986574212</p>
+				<p class="text-secondary">dwstore@dw.com</p>
 			</div>
 			<div class="col-lg-5">
 				<div class="form-group">
@@ -125,7 +122,12 @@
 							<textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="MENSAJE" required></textarea>
 						</div>
 						<div class="form-group col-lg-12">
-							<button type="submit" class="btn btn-dark text-white col-lg-12">SEND MESSAGE</button>
+							<!-- <button type="submit" class="btn btn-dark text-white col-lg-12">SEND MESSAGE</button> -->
+							<!-- <input type="button" name="login" value="click aqui" onclick="darclick();" /> -->
+							<input type="button" class="btn btn-dark text-white col-lg-12" onclick="alert();" value="ENVIA UN MENSAJE" />
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button> -->
 						</div>
 					</div>
 				</div>
@@ -134,10 +136,10 @@
 	</div>
 	<div class="container-fluid">
 		<footer class="row p-3 colorgris">
-			<div class="col-lg-3">INSTAGRAM</div>
-			<div class="col-lg-3">TWITTER</div>
-			<div class="col-lg-3">FACEBOOK</div>
-			<div class="col-lg-3">PINTEREST</div>
+			<div class="col-lg-3"><a href="https://www.instagram.com/?hl=es" class="text-dark" target=_blank>INSTAGRAM</a></div>
+			<div class="col-lg-3"><a href="https://twitter.com/?lang=es" class="text-dark" target=_blank>TWITTER</a></div>
+			<div class="col-lg-3"><a href="https://es-es.facebook.com/" class="text-dark" target=_blank>FACEBOOK</a></div>
+			<div class="col-lg-3"><a href="https://www.pinterest.es/" class="text-dark" target=_blank>PINTEREST</a></div>
 		</footer>
 	</div>
 	<script src="js/jquery.min.js"></script>
